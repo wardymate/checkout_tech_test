@@ -1,5 +1,4 @@
 class Item
-
   attr_reader :price, :product_code, :name
   attr_accessor
 
@@ -8,5 +7,4 @@ class Item
     @name = options[:name]
     @product_code = options[:product_code]
   end
-
 end

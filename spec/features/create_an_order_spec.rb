@@ -1,7 +1,7 @@
 feature 'As a customer I want to order items from an online marketplace' do
-  heart = Item.new({ price: 925, product_code: 001 })
-  cufflinks = Item.new({ price: 4500, product_code: 002 })
-  kids_t_shirt = Item.new({ price: 1995, product_code: 003 })
+  heart = Item.new(price: 925, product_code: 001)
+  cufflinks = Item.new(price: 4500, product_code: 002)
+  kids_t_shirt = Item.new(price: 1995, product_code: 003)
 
   scenario 'an order of a lavender heart and personalised cufflinks totals £54.25' do
     co = Checkout.new
