@@ -1,9 +1,11 @@
 feature 'As a customer I want to order items from an online marketplace' do
-  let (:co) { Checkout.new }
+  co = Checkout.new
+  heart = Item.new({ price: 925 })
+  cufflinks = Item.new({ price: 4500 })
 
-  scenario 'an order of a lavender heart, personalised cufflinks and a kids t-shirt' do
-    co.scan(:heart)
-    co.scan(:cufflinks)
+  scenario 'an order of a lavender heart and personalised cufflinks totals £54.25' do
+    co.scan(heart)
+    co.scan(cufflinks)
     expect(co.total).to eq 5425
   end
 

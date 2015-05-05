@@ -1,5 +1,3 @@
-require 'checkout'
-
 describe Checkout do
   let (:heart) { double :item, price: 925 }
   let (:cufflinks) { double :item, price: 4500 }
@@ -14,6 +12,5 @@ describe Checkout do
     subject.scan(cufflinks)
     expect(subject.total).to eq 5425
   end
-
 
 end
