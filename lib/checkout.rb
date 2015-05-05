@@ -14,7 +14,7 @@ class Checkout
 
   def total
     return sub_total if @discount_amount == nil
-    sub_total > @discount_amount ? sub_total*((100-@discount_rate)/100.0) : sub_total
+    sub_total > @discount_amount ? (sub_total*((100-@discount_rate)/100.0)).ceil.to_i : sub_total
   end
 
   private

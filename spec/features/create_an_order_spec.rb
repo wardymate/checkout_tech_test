@@ -26,4 +26,13 @@ feature 'As a customer I want to order items from an online marketplace' do
     co.scan(kids_t_shirt)
     expect(co.total).to eq 3695
   end
+
+  scenario 'an order of 2 lavender hearts, personalised cufflinks and kids t-shirt totals £73.76' do
+    promotional_rules = { discount_amount: 6000, discount_rate: 10, heart_amount: 2, heart_discount: 75 }
+    co = Checkout.new(promotional_rules)
+    2.times { co.scan(heart) }
+    co.scan(kids_t_shirt)
+    co.scan(cufflinks)
+    expect(co.total).to eq 7376
+  end
 end
