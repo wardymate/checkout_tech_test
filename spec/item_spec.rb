@@ -1,6 +1,6 @@
 describe Item do
 
-  heart = Item.new({price: 925})
+  heart = Item.new({price: 925, name: 'Lavender Heart'})
 
   it 'has a price' do
     expect(heart).to respond_to :price
@@ -12,6 +12,10 @@ describe Item do
 
   it 'has a product code' do
     expect(heart).to respond_to :product_code
+  end
+
+  it 'has a name' do
+    expect(heart.name).to eq 'Lavender Heart'
   end
 
 end
