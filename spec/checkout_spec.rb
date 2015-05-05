@@ -13,15 +13,21 @@ describe Checkout do
     expect(subject.total).to eq 5425
   end
 
-  it 'is initialised with no discounts unless specified' do
-    co = Checkout.new
-    3.times{ co.scan(cufflinks) }
-    expect(co.total).to eq 13500
-  end
-
   it 'applies a discount rate specified' do
     co = Checkout.new({discount_rate: 10})
     co.scan(cufflinks)
     expect(co.total).to eq 4050
+  end
+
+  it 'applies a discount rate specified when the basket reaches a certain amount' do
+    co = Checkout.new({discount_rate: 10, discount_amount: 6000})
+    3.times{ co.scan(cufflinks) }
+    expect(co.total).to eq 12150
+  end
+
+  it 'does not apply a discount rate unless the basket is of a certain value' do
+    co = Checkout.new({discount_rate: 10, discount_amount: 6000})
+    co.scan(heart)
+    expect(co.total).to eq 925
   end
 end
