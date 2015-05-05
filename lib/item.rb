@@ -1,6 +1,5 @@
 class Item
   attr_reader :price, :product_code, :name
-  attr_accessor
 
   def initialize(options)
     @price = options[:price]
