@@ -6,8 +6,12 @@ To install
 
 clone repository.
 
-``` bundle ```
+```bash 
+bundle 
+```
 
 to run tests.
 
-``` rspec ```
+```bash
+rspec 
+```
