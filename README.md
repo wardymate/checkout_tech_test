@@ -4,7 +4,7 @@ A simple till as part of a tech test.
 
 To install
 
-clone this repository
+clone this repository then run
 
 ` 
 $ bundle 
