@@ -16,8 +16,8 @@ to run tests
 $ rspec 
 `
 
-to load in irb
+to load files in irb
 
-`
+```ruby
 > Dir['./lib/*.rb'].each { |f| require f }
-`
+```
