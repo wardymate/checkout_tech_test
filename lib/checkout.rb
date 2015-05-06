@@ -12,7 +12,7 @@ class Checkout
   end
 
   def total
-    return sub_total if @discount_amount.nil?
+    return sub_total unless @discount_amount
     sub_total > @discount_amount ? (sub_total * ((100 - @discount_rate) / 100.0)).ceil.to_i : sub_total
   end
 
