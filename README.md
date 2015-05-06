@@ -10,8 +10,14 @@ clone this repository then run
 $ bundle 
 `
 
-to run tests.
+to run tests
 
 `
 $ rspec 
+`
+
+to load in irb
+
+`
+> Dir['./lib/*.rb'].each { |f| require f }
 `
