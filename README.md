@@ -1,17 +1,17 @@
-# checkout_tech_test
+# Checkout Ruby on rails test
 
 A simple till as part of a tech test.
 
 To install
 
-clone repository.
+clone this repository
 
-```bash 
-bundle 
-```
+` 
+$ bundle 
+`
 
 to run tests.
 
-```bash
-rspec 
-```
+`
+$ rspec 
+`
